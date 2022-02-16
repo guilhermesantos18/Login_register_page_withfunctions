@@ -1,12 +1,12 @@
-from django.db import models
+from django import forms
 
-class LoginPage(models.Model):
-    email = models.EmailField(max_length=200)
-    password = models.CharField(max_length=200)
+class LoginPage(forms.Form):
+    email = forms.EmailField(max_length=200)
+    password = forms.CharField(max_length=200)
 
 
-class RegisterPage(models.Model):
-    name = models.CharField(max_length=200)
-    email = models.EmailField(max_length=200)
-    password = models.CharField(max_length=200)
+class RegisterPage(forms.Form):
+    name = forms.CharField(max_length=200)
+    email = forms.EmailField(max_length=200)
+    password = forms.CharField(max_length=200)
 

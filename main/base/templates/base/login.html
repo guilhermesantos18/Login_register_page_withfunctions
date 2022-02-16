@@ -12,10 +12,7 @@
     <h1>Login</h1>
     <form action="" method="post">
       {% csrf_token %}
-      <label for="fname">Email:</label>
-      <input type="text" id="fname" name="email" />
-      <label for="lname">Password:</label>
-      <input type="password" id="lname" name="password" />
+      {{ loginform }}
       <a href="{% url 'register' %}">Not Signed up?</a>
       <a href="{%url 'welcome' %}"><button type="submit" value="OK">Entrar</button></a>
     </form>
